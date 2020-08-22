@@ -417,7 +417,14 @@ qmk_dict = {
     "MATH": "MATH",
     "GAME": "GAME",
     "MOUSE": "MOUSE",
-    "NEO": "TG(2)"
+    "NEO": "TG(2)",
+
+    # custom
+    "LT1Esc": "LT(1,KC_ESC)",
+    "LT2RAlt": "LT(2,KC_RALT)",
+    "HASH": "KC_NONUS_HASH",
+    "GRV": "KC_GRV"
+
 }
 
 # These keys are repeated in all layers.
@@ -485,8 +492,19 @@ mouse = [
     "TG6",     "",     "",        "",        "",        "",        "",        "",        "",        "",        "",        "",
     ]
 
+# 0
+qwertz = [
+    "GRV",    "1", "2",  "3",    "4",     "5",     "6",     "7",    "8",    "9",    "0", "-",
+    "Tab",    "q", "w",  "e",    "r",     "t",     "z",     "u",    "i",    "o",    "p", "[",
+    "Esc",    "a", "s",  "d",    "f",     "g",     "h",     "j",    "k",    "l",    ";", "'",
+    "LShift", "y", "x",  "c",    "v",     "b",     "n",     "m",    ",",    ".",    "/", "RShift)",
+    "LT1Esc", "=", "\\", "LGui", "LCtrl", "Space", "Enter", "LAlt", "RAlt", "HASH", "]", "LT2RAlt",
+    ]
+
 layers = [
-    qwerty,
+    qwertz
+    #qwertz,
+    #qwertz
     #colemak,
     #numpad,
     #fpad,

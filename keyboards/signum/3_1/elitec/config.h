@@ -14,12 +14,14 @@
 #define MK_KINETIC_SPEED
 
 /* key matrix size */
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 12
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 10
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { D2, D1, F5, B5 }   // TODO edit pins
-#define MATRIX_COL_PINS { B4, D7, D0, E6, D4, F6, F4, F7, B1, B3, C6, B2 } // TODO edit pins
+/* #define MATRIX_ROW_PINS { D2, D1, F5, B5 }   // TODO edit pins*/
+#define MATRIX_ROW_PINS { D2, D1, F5, B5, B2, C6 }   // see http://troyfletcher.net/config.html
+/* #define MATRIX_COL_PINS { B4, D7, D0, E6, D4, F6, F4, F7, B1, B3, C6, B2 } // TODO edit pins */
+#define MATRIX_COL_PINS { B4, D7, D0, E6, D4, F6, F4, F7, B1, B3 } // see http://troyfletcher.net/config.html
 #define UNUSED_PINS
 
 #define DIODE_DIRECTION COL2ROW

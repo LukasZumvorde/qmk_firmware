@@ -2,7 +2,7 @@
 
 ![Signum 3.1 Top](https://i.redd.it/vl54yl36bpz11.jpg)
 
-An ergonomic 40% PCB.
+An ergonomic 50% PCB.
 
 Keyboard Maintainer: [Troy Fletcher](http://troyfletcher.net/)
 Hardware available here: [Troy Fletcher](http://troyfletcher.net/keyboard_sales.html)

@@ -9,6 +9,7 @@ MCU = atmega32u4
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
+#BOOTLOADER = atmel-dfu
 BOOTLOADER = atmel-dfu
 
 # Build Options
@@ -27,4 +28,4 @@ RGBLIGHT_ENABLE = no
 
 UNICODEMAP_ENABLE = no
 
-LAYOUTS = ortho_5x12
+LAYOUTS = ortho_6x10
