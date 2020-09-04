@@ -1,7 +1,6 @@
 /* keymap.c is auto-generated, don't edit it directly.
  * Further instructions are provided in readme.md */
 
-// #include keymap_german.h
 #include QMK_KEYBOARD_H
 
 enum unicode_name {
@@ -629,22 +628,68 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * -------------------------------------------------               -------------------------------------------------
  * |  GRV  |   1   |   2   |   3   |   4   |   5   |               |   6   |   7   |   8   |   9   |   0   |   -   |
  * -------------------------------------------------               -------------------------------------------------
- * |  Tab  |   q   |   w   |   e   |   r   |   t   |               |   z   |   u   |   i   |   o   |   p   |   [   |
+ * |  Tab  |   q   |   w   |   e   |   r   |   t   |               |   y   |   u   |   i   |   o   |   p   |   [   |
  * -------------------------------------------------               -------------------------------------------------
- * |  Esc  |   a   |   s   |   d   |   f   |   g   |               |   h   |   j   |   k   |   l   |   ;   |   '   |
+ * |  Esc  |   a   |   s   |   d   |   f   |   g   |               |   h   |   j   |   k   |   l   |   ;   |BSpace |
  * -----------------------------------------------------------------------------------------------------------------
- * |LShift |   y   |   x   |   c   |   v   |   b   |               |   n   |   m   |   ,   |   .   |   /   |RShift)|
+ * |LShift |   z   |   x   |   c   |   v   |   b   |               |   n   |   m   |   ,   |   .   |   '   |   /   |
  * -----------------------------------------------------------------------------------------------------------------
- * |LT1Esc     =       \           | LGui  | LCtrl | Space | Enter | LAlt  | RAlt  |         HASH      ]    LT2RAlt|
+ * |LT1Esc     =    NUSBSLS        | LAlt  | LCtrl | Space | Enter | LGui  | RAlt  |         HASH      ]    LT2RAlt|
  * -----------------------------------------------------------------------------------------------------------------
  */
 	LAYOUT_ortho_6x10(
-		KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_7, KC_6, KC_V, KC_8, KC_9,
-		KC_0, KC_MINS, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Z, KC_U,
-		KC_I, KC_O, KC_P, KC_LBRC, KC_ESC, KC_A, KC_S, KC_D, KC_F, KC_G,
-		KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_LSFT, KC_Y, KC_X, KC_C,
-		LT(1,KC_ESC), KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSPC, KC_ENT, KC_EQL,
-		KC_BSLS, KC_LGUI, KC_LCTL, KC_SPC, KC_5, KC_LALT, KC_RALT, KC_NONUS_HASH, KC_RBRC, LT(2,KC_RALT)
+		KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_7, KC_8, KC_9, KC_0, KC_MINS,
+		KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_U, KC_I, KC_O, KC_P, KC_LBRC,
+		KC_ESC, KC_A, KC_S, KC_D, KC_F, KC_J, KC_K, KC_L, KC_SCLN, KC_BSPC,
+		KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_M, KC_COMM, KC_DOT, KC_QUOT, KC_SLSH,
+		LT(1,KC_ESC), KC_SPC, KC_EQL, KC_NONUS_BSLASH, KC_LALT, KC_RALT, KC_NONUS_HASH, KC_RBRC, KC_ENT, LT(2,OSM(MOD_RALT)),
+		KC_LCTL, KC_B, KC_G, KC_T, KC_5, KC_6, KC_Y, KC_H, KC_N, KC_LGUI
+	),
+
+/*
+ * Layer 1
+ * -------------------------------------------------               -------------------------------------------------
+ * |  F1   |  F2   |  F3   |  F4   |  F5   |  F6   |               |  F7   |  F8   |  F9   |  F10  |  F11  |  F12  |
+ * -------------------------------------------------               -------------------------------------------------
+ * |       |       |       |       |       |       |               |       |       |       |       |       |Insert |
+ * -------------------------------------------------               -------------------------------------------------
+ * |       |       |       |       |       |       |               |       |< Arrow|v Arrow|^ Arrow|> Arrow|  Del  |
+ * -----------------------------------------------------------------------------------------------------------------
+ * |       |       |       |       |       |       |               |       | Home  |Pg Down| Pg Up |  End  |       |
+ * -----------------------------------------------------------------------------------------------------------------
+ * |        __VOLDOWN __VOLUP        |       |       |       |       |       |       |                               |
+ * -----------------------------------------------------------------------------------------------------------------
+ */
+	LAYOUT_ortho_6x10(
+		KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_DEL,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC__VOLDOWN, KC__VOLUP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F6, KC_F7, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+	),
+
+/*
+ * Layer 2
+ * -------------------------------------------------               -------------------------------------------------
+ * |       |       |       |       |       |       |               |       |       |       |       |       |       |
+ * -------------------------------------------------               -------------------------------------------------
+ * |       |       |       |       |       |       |               |       |       |       |       |       |       |
+ * -------------------------------------------------               -------------------------------------------------
+ * |       |       |       |       |       |       |               |       |       |       |       |       |       |
+ * -----------------------------------------------------------------------------------------------------------------
+ * |       |       |       |       |       |       |               |       |       |       |       |       |       |
+ * -----------------------------------------------------------------------------------------------------------------
+ * |                               |       |       |       |       |       |       |                               |
+ * -----------------------------------------------------------------------------------------------------------------
+ */
+	LAYOUT_ortho_6x10(
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 	)
 };
 

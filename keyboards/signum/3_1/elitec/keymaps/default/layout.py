@@ -421,8 +421,9 @@ qmk_dict = {
 
     # custom
     "LT1Esc": "LT(1,KC_ESC)",
-    "LT2RAlt": "LT(2,KC_RALT)",
+    "LT2RAlt": "LT(2,OSM(MOD_RALT))",
     "HASH": "KC_NONUS_HASH",
+    "NUSBSLS": "KC_NONUS_BSLASH",
     "GRV": "KC_GRV"
 
 }
@@ -494,17 +495,42 @@ mouse = [
 
 # 0
 qwertz = [
-    "GRV",    "1", "2",  "3",    "4",     "5",     "6",     "7",    "8",    "9",    "0", "-",
-    "Tab",    "q", "w",  "e",    "r",     "t",     "z",     "u",    "i",    "o",    "p", "[",
-    "Esc",    "a", "s",  "d",    "f",     "g",     "h",     "j",    "k",    "l",    ";", "'",
-    "LShift", "y", "x",  "c",    "v",     "b",     "n",     "m",    ",",    ".",    "/", "RShift)",
-    "LT1Esc", "=", "\\", "LGui", "LCtrl", "Space", "Enter", "LAlt", "RAlt", "HASH", "]", "LT2RAlt",
+    "GRV",    "1", "2",  "3",    "4",     "5",     "6",     "7",    "8",    "9",    "0",     "-",
+    "Tab",    "q", "w",  "e",    "r",     "t",     "y",     "u",    "i",    "o",    "p",     "[",
+    "Esc",    "a", "s",  "d",    "f",     "g",     "h",     "j",    "k",    "l",    ";",     "BSpace",
+    "LShift", "z", "x",  "c",    "v",     "b",     "n",     "m",    ",",    ".",    "'",     "/",
+    "LT1Esc", "Space", "=", "NUSBSLS", "LAlt", "LCtrl", "LGui",  "RAlt", "HASH", "]",    "Enter", "LT2RAlt",
     ]
 
+# 1
+layer1 = [
+    "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12",
+    "", "", "", "", "", "", "", "", "", "", "", "Insert",
+    "", "", "", "", "", "", "", "< Arrow", "v Arrow", "^ Arrow", "> Arrow", "Del",
+    "", "", "", "", "", "", "", "Home", "Pg Down", "Pg Up", "End", "",
+    "", "", "KC__VOLDOWN", "KC__VOLUP", "", "", "", "", "", "", "", "",
+]
+
+# 2
+layer2 = [
+    "", "", "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "", "", "",
+    ]
+
+#experiment = ["6"] * 12 + ["7"] * 12 + ["8"] * 12 + ["9"] * 12 + ["0"] * 12
+experiment = ["0"] * 60
+#experiment[11] = "1"
+experiment[50:60] = ["a","b","c","d","e","f","g","h","i","j"]
+
 layers = [
-    qwertz
+    #experiment
     #qwertz,
-    #qwertz
+    qwertz,
+    layer1,
+    layer2,
     #colemak,
     #numpad,
     #fpad,
